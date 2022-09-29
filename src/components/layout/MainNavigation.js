@@ -9,11 +9,7 @@ const MainNavigation = () => {
 			<nav className={classes.nav}>
 				<ul>
 					<li>
-<<<<<<< HEAD
 						<NavLink activeClassName={classes.active} to="/quotes">
-=======
-						<NavLink activeClassName={classes.active} to="/qoutes">
->>>>>>> e0042231aadf20d938d57e7f284755e07dcfc92a
 							All Quotes
 						</NavLink>
 					</li>
