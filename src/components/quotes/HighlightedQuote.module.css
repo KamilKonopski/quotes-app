@@ -1,11 +1,11 @@
 .quote {
   background-color: #162b2b;
-  color: white;
   border-radius: 6px;
-  padding: 3rem;
+  color: white;
   margin: 3rem auto;
-  width: 90%;
   max-width: 40rem;
+  padding: 3rem;
+  width: 90%;
 }
 
 .quote p {
@@ -13,8 +13,8 @@
 }
 
 .quote figcaption {
-  font-style: italic;
-  font-size: 1.5rem;
-  text-align: right;
   color: #a1e0e0;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: right;
 }
