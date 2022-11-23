@@ -6,7 +6,7 @@ import useHttp from "../hooks/use-http";
 import QuoteForm from "../components/quotes/QuoteForm";
 import { addQuote } from "../lib/api";
 
-const NewQuote = () => {
+function NewQuote() {
 	const { sendRequest, status } = useHttp(addQuote);
 	const history = useHistory();
 
@@ -16,7 +16,7 @@ const NewQuote = () => {
 		}
 	}, [status, history]);
 
-	const addQuoteHandler = (quoteData) => {
+	function addQuoteHandler(quoteData) {
 		sendRequest(quoteData);
 	};
 
