@@ -4,7 +4,7 @@ import MainNavigation from "./MainNavigation";
 
 import classes from "./Layout.module.css";
 
-const Layout = (props) => {
+function Layout(props) {
 	return (
 		<Fragment>
 			<MainNavigation />
