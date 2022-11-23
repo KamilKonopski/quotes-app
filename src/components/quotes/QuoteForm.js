@@ -5,7 +5,7 @@ import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import classes from "./QuoteForm.module.css";
 
-const QuoteForm = (props) => {
+function QuoteForm(props) {
 	const [isEntering, setIsEntering] = useState(false);
 
 	const authorInputRef = useRef();
@@ -22,11 +22,11 @@ const QuoteForm = (props) => {
 		props.onAddQuote({ author: enteredAuthor, text: enteredText });
 	}
 
-	const formFocusedHandler = () => {
+	function formFocusedHandler() {
 		setIsEntering(true);
 	};
 
-	const finishEnteringHandler = () => {
+	function finishEnteringHandler() {
 		setIsEntering(false);
 	};
 
