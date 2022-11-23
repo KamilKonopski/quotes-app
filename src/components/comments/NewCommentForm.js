@@ -6,7 +6,7 @@ import { addComment } from "../../lib/api";
 
 import classes from "./NewCommentForm.module.css";
 
-const NewCommentForm = (props) => {
+function NewCommentForm(props) {
 	const commentTextRef = useRef();
 
 	const { sendRequest, status, error } = useHttp(addComment);
@@ -19,7 +19,7 @@ const NewCommentForm = (props) => {
 		}
 	}, [status, error, onAddedComment]);
 
-	const submitFormHandler = (event) => {
+	function submitFormHandler(event) {
 		event.preventDefault();
 
 		const enteredText = commentTextRef.current.value;
