@@ -10,7 +10,7 @@ import NewCommentForm from "./NewCommentForm";
 
 import classes from "./Comments.module.css";
 
-const Comments = () => {
+function Comments() {
 	const [isAddingComment, setIsAddingComment] = useState(false);
 	const params = useParams();
 
@@ -22,7 +22,7 @@ const Comments = () => {
 		sendRequest(quoteId);
 	}, [sendRequest, quoteId]);
 
-	const startAddCommentHandler = () => {
+	function startAddCommentHandler() {
 		setIsAddingComment(true);
 	};
 
