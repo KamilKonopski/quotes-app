@@ -6,7 +6,7 @@ import QuoteList from "../components/quotes/QuoteList";
 import useHttp from "../hooks/use-http";
 import { getAllQuotes } from "../lib/api";
 
-const AllQuotes = () => {
+function AllQuotes() {
 	const {
 		sendRequest,
 		status,
