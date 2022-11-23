@@ -7,7 +7,7 @@ import Comments from "../components/comments/Comments";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 
-const QuoteDetail = () => {
+function QuoteDetail() {
 	const match = useRouteMatch();
 	const params = useParams();
 
