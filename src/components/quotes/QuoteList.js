@@ -2,9 +2,10 @@ import { Fragment } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 
 import QuoteItem from "./QuoteItem";
+
 import classes from "./QuoteList.module.css";
 
-const sortQuotes = (quotes, ascending) => {
+function sortQuotes(quotes, ascending) {
 	return quotes.sort((quoteA, quoteB) => {
 		if (ascending) {
 			return quoteA.id > quoteB.id ? 1 : -1;
@@ -14,7 +15,7 @@ const sortQuotes = (quotes, ascending) => {
 	});
 };
 
-const QuoteList = (props) => {
+function QuoteList(props) {
 	const history = useHistory();
 	const location = useLocation();
 
@@ -24,7 +25,7 @@ const QuoteList = (props) => {
 
 	const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
 
-	const changeSortingHandler = () => {
+	function changeSortingHandler() {
 		history.push({
 			pathname: location.pathname,
 			search: `?sort=${isSortingAscending ? "desc" : "asc"}`,
